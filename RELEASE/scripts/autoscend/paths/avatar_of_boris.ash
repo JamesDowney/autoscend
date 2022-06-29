@@ -149,129 +149,14 @@ void boris_buySkills()
 			skillPoints = skillPoints - 1;
 			int tree = 1;
 
-			//skills are listed in reverse order. from last to first to buy.
+			//
 			//Correct Boris strat is super easy. get all feasting, then all shouting, then fighting last.
-			if(!have_skill($skill[Bifurcating Blow]))
-			{
-				tree = 1;
-			}
-			if(!have_skill($skill[Legendary Impatience]))
-			{
-				tree = 1;
-			}
-			if(!have_skill($skill[Song of Cockiness]))
-			{
-				tree = 1;
-			}
-			if(!have_skill($skill[Legendary Luck]))
-			{
-				tree = 1;
-			}
-			if(!have_skill($skill[Throw Trusty]))
-			{
-				tree = 1;
-			}
-			if(!have_skill($skill[Pep Talk]))
-			{
-				tree = 1;
-			}
-			if(!have_skill($skill[Sick Pythons]))
-			{
-				tree = 1;
-			}
-			if(!have_skill($skill[Broadside]))
-			{
-				tree = 1;
-			}
-			if(!have_skill($skill[[11002]Ferocity]))
-			{
-				tree = 1;
-			}
-			if(!have_skill($skill[Cleave]))
-			{
-				tree = 1;
-			}
-			
-			if(!have_skill($skill[Banishing Shout]))
-			{
-				tree = 2;
-			}
-			if(!have_skill($skill[Song of Battle]))
-			{
-				tree = 2;
-			}
-			if(!have_skill($skill[Louder Bellows]))
-			{
-				tree = 2;
-			}
-			if(!have_skill($skill[Song of Fortune]))
-			{
-				tree = 2;
-			}
-			if(!have_skill($skill[Good Singing Voice]))
-			{
-				tree = 2;
-			}
-			if(!have_skill($skill[Song of Solitude]))
-			{
-				tree = 2;
-			}
-			if(!have_skill($skill[Big Lungs]))
-			{
-				tree = 2;
-			}
-			if(!have_skill($skill[Song of Accompaniment]))
-			{
-				tree = 2;
-			}
-			if(!have_skill($skill[Legendary Bravado]))
-			{
-				tree = 2;
-			}
-			if(!have_skill($skill[Intimidating Bellow]))
-			{
-				tree = 2;
-			}
-			
-			if(!have_skill($skill[Gourmand]))
-			{
+			if (!have_skills($skills[Gourmand, Barrel Chested, More to Love, Hungry Eyes, Heroic Belch, Legendary Appetite, Big Boned, Song of the Glorious Lunch, Legendary Girth, Demand Sandwich])) {
 				tree = 3;
-			}
-			if(!have_skill($skill[Barrel Chested]))
-			{
-				tree = 3;
-			}
-			if(!have_skill($skill[More to Love]))
-			{
-				tree = 3;
-			}
-			if(!have_skill($skill[Hungry Eyes]))
-			{
-				tree = 3;
-			}
-			if(!have_skill($skill[Heroic Belch]))
-			{
-				tree = 3;
-			}
-			if(!have_skill($skill[Legendary Appetite]))
-			{
-				tree = 3;
-			}
-			if(!have_skill($skill[Big Boned]))
-			{
-				tree = 3;
-			}
-			if(!have_skill($skill[Song of the Glorious Lunch]))
-			{
-				tree = 3;
-			}
-			if(!have_skill($skill[Legendary Girth]))
-			{
-				tree = 3;
-			}
-			if(!have_skill($skill[Demand Sandwich]))
-			{
-				tree = 3;
+			} else if (!have_skills($skills[Banishing Shout, Song of Battle, Louder Bellows, Song of Fortune, Good Singing Voice, Song of Solitude, Big Lungs, Song of Accompaniment, Legendary Bravado, Intimidating Bellow])) {
+				tree = 2;
+			} else {
+				tree = 1;
 			}
 
 			visit_url("da.php?pwd&whichtree=" + tree + "&action=borisskill");
