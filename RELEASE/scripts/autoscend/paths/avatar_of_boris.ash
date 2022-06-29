@@ -149,7 +149,6 @@ void boris_buySkills()
 			skillPoints = skillPoints - 1;
 			int tree = 1;
 
-			//
 			//Correct Boris strat is super easy. get all feasting, then all shouting, then fighting last.
 			if (!have_skills($skills[Gourmand, Barrel Chested, More to Love, Hungry Eyes, Heroic Belch, Legendary Appetite, Big Boned, Song of the Glorious Lunch, Legendary Girth, Demand Sandwich])) {
 				tree = 3;
